@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>525</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignmentFlag::AlignTop">
+    <widget class="QFrame" name="rowFrame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>405</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>56</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#rowFrame[status=&quot;on&quot;]  { background: #5cac4f; /* on colour */ }
+QFrame#rowFrame[status=&quot;faulty&quot;]  { background: #f44339; /* faulty colour */ }
+QFrame#rowFrame[status=&quot;in_progress&quot;]  { background: #ffcc00; /* in_progress colour */ }
+QFrame#rowFrame[status=&quot;off&quot;]  { background: #cccccc; /* off colour */ }
+QFrame#rowFrame{border-radius:4px;}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <property name="status" stdset="0">
+      <string>on</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnAcknowledge">
+        <property name="minimumSize">
+         <size>
+          <width>91</width>
+          <height>37</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>105</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#btnAcknowledge {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #00c6ff, stop:1 #0072ff);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 18px;
+    padding: 8px 28px;
+    min-width: 35px;
+    min-height: 21px;
+}
+QPushButton#btnAcknowledge:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #4fdcff, stop:1 #349fff);
+}
+QPushButton#btnAcknowledge:pressed, QPushButton#btnAcknowledge:checked {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #006488, stop:1 #004e70);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>ACK</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnMask">
+        <property name="minimumSize">
+         <size>
+          <width>95</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#btnMask {
+    background: transparent;
+    color: #ffc110;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #FFC107;
+    border-radius: 18px;
+    padding: 8px 28px;
+    min-width: 35px;
+    min-height: 21px;
+    transition: background 0.2s, border 0.2s;
+}
+QPushButton#btnMask:checked {
+    background: #FFC107;
+    color: white;
+    border: 2px solid #FFC107;
+}
+QPushButton#btnMask:hover {
+    border: 2px solid #FFD54F;
+}
+QPushButton#btnMask:disabled {
+    background: #f8f9fa;
+    color: #adb5bd;
+    border: 2px solid #eee;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>MASK</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>35</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="ledStatus">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel#ledStatus[unmaskstatus=&quot;green&quot;] {
+    border-radius: 16px;
+    border: 4px solid #181B1E;
+	background: #00f900;
+}
+
+QLabel#ledStatus[unmaskstatus=&quot;red&quot;] {
+    border-radius: 16px;
+    border: 4px solid #181B1E;
+    box-shadow: 0 0 12px #E53935AA;
+	background: #ff0000;
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="unmaskstatus" stdset="0">
+         <string>red</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblCode">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>240</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>440</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Phosphor</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Code name</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

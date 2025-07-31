@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StepDetailsDialog</class>
+ <widget class="QDialog" name="StepDetailsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>815</width>
+    <height>561</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>815</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Details</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="detailsFrame">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>810</width>
+       <height>400</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <property name="status" stdset="0">
+      <string/>
+     </property>
+     <layout class="QVBoxLayout" name="frameMainLayout">
+      <item>
+       <widget class="QFrame" name="Header">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame#Header[status=&quot;on&quot;]  { background: #5cac4f; border-radius:4px; /* on colour */ }
+QFrame#Header[status=&quot;faulty&quot;]  { background: #f44339; border-radius:4px; /* faulty colour */ }
+QFrame#Header[status=&quot;in_progress&quot;]  { background: #ffcc00; border-radius:4px; /* in_progress colour */ }
+QFrame#Header[status=&quot;off&quot;]  { background: #cccccc; border-radius:4px; /* off colour */ }
+</string>
+        </property>
+        <property name="status" stdset="0">
+         <string>off</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="lblStepNumber">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Phosphor</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel#lblStepNumber {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    background: transparent;  /* Let the QFrame color show through */
+    border: none;
+}</string>
+           </property>
+           <property name="text">
+            <string>1</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblStepName">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>440</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>remixicon</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel#lblStepName {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    background: transparent;  /* Let the QFrame color show through */
+    border: none;
+}</string>
+           </property>
+           <property name="text">
+            <string>Step name</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblTimer">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>37</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Phosphor</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel#lblTimer {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    background: transparent;  /* Let the QFrame color show through */
+    border: none;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="btnON">
+           <property name="minimumSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">    QToolButton {
+        background: transparent;
+        border: none;
+    }
+    QToolButton:hover {
+        background: rgba(100, 255, 100, 0.2);
+    }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../images/on-tag-details.svg</normaloff>../images/on-tag-details.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="btnOFF">
+           <property name="minimumSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">    QToolButton {
+        background: transparent;
+        border: none;
+    }
+    QToolButton:hover {
+        background: rgba(100, 255, 100, 0.2);
+    }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../images/off-tag-details.svg</normaloff>../images/off-tag-details.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="Main">
+        <property name="minimumSize">
+         <size>
+          <width>800</width>
+          <height>400</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="hLayout" stretch="2,1">
+           <item>
+            <widget class="QWidget" name="interlocksContainer" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>530</width>
+               <height>400</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#interlocksContainer {
+    border: 3px solid #00f0cc;
+    border-radius: 8px;
+    background: #fafbfd;
+    padding: 8px;
+}</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLabel" name="Interlocklbl">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>58</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel#Interlocklbl {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 1px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>INTERLOCK</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="interlock_grid"/>
+              </item>
+              <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignBottom">
+               <widget class="QPushButton" name="Resetbtn">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton#Resetbtn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #ff6666, stop:1 #ff2020);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 18px;
+    padding: 8px 28px;
+    box-shadow: 0px 2px 10px rgba(255,60,60,0.12);
+    min-width: 35px;
+    min-height: 21px;
+    transition: background 0.2s;
+}
+QPushButton#Resetbtn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #ff3030, stop:1 #ff7c7c);
+}
+QPushButton#Resetbtn:pressed {
+    background: #c82333;
+}</string>
+                </property>
+                <property name="text">
+                 <string>RESET</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="statusContainer" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>222</width>
+               <height>400</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#statusContainer {
+    border: 3px solid #00ff00;
+    border-radius: 8px;
+    background: #fafbfd;
+    padding: 8px;
+}
+</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="Statuslbl">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>58</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel#Statuslbl {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 1px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>STATUS</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="status_grid" rowstretch="0">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+                </property>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
